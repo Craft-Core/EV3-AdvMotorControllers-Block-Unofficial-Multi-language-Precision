@@ -1,0 +1,252 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<EditorStrings>
+    <PolyGroups ModuleName="OFDL Advanced Motor Controllers">
+        
+        <PolyGroup Name="OFDL PD Controller" DisplayName="PDコントローラー - OFDL Dev." DisplayNamePrefix="OFDL PD Controller">
+            <Parameter Name="Ports" DisplayName="ポート">
+                <Description><![CDATA[<p>センサーの接続ポート</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P1" DisplayName="センサー入力 1">
+                <Description><![CDATA[<p>センサー入力 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P2" DisplayName="センサー入力 2">
+                <Description><![CDATA[<p>センサー入力 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="Pゲイン">
+                <Description><![CDATA[<p>Pゲインを設定します（比例制御）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kd" DisplayName="Dゲイン">
+                <Description><![CDATA[<p>Dゲインを設定します（微分制御）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power" DisplayName="パワー">
+                <Description><![CDATA[<p>基準パワーを設定します</p>]]></Description>
+            </Parameter>
+            
+            <Block Mode="Configuration" DisplayName="コントローラー設定">
+                <Description><![CDATA[<p>構成設定</p>]]></Description>
+            </Block>
+            <Category Name="P_byVars" DisplayName="P制御">
+                <Block Mode="P_Large" DisplayName="Lモーター">
+                    <Description><![CDATA[<p>Lモーター</p>]]></Description>
+                </Block>
+                <Block Mode="P_Medium" DisplayName="Mモーター">
+                    <Description><![CDATA[<p>Mモーター</p>]]></Description>
+                </Block>
+                <Block Mode="P_twoRev" DisplayName="両輪反転">
+                    <Description><![CDATA[<p>両輪反転</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PD_byVars" DisplayName="PD制御">
+                <Block Mode="PD_Large" DisplayName="Lモーター">
+                    <Description><![CDATA[<p>Lモーター</p>]]></Description>
+                </Block>
+                <Block Mode="PD_Medium" DisplayName="Mモーター">
+                    <Description><![CDATA[<p>Mモーター</p>]]></Description>
+                </Block>
+                <Block Mode="PD_twoRev" DisplayName="両輪反転">
+                    <Description><![CDATA[<p>両輪反転</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PDpwr_byVars" DisplayName="PD制御 (パワー入力)">
+                <Block Mode="PDpwr_Large" DisplayName="Lモーター">
+                    <Description><![CDATA[<p>Lモーター</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_Medium" DisplayName="Mモーター">
+                    <Description><![CDATA[<p>Mモーター</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_twoRev" DisplayName="両輪反転">
+                    <Description><![CDATA[<p>両輪反転</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL Acceleration Controller" DisplayName="加減速コントローラー - OFDL Dev." DisplayNamePrefix="OFDL Acceleration Controller">
+            <Parameter Name="EncPort" DisplayName="ポート">
+                <Description><![CDATA[<p>センサーのポート</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxPwr" DisplayName="目標パワー">
+                <Description><![CDATA[<p>最大パワー</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinPwr" DisplayName="初期パワー">
+                <Description><![CDATA[<p>最小パワー</p>]]></Description>
+            </Parameter>
+            <Parameter Name="AccelDist" DisplayName="加速距離">
+                <Description><![CDATA[<p>加速距離</p>]]></Description>
+            </Parameter>
+            <Parameter Name="DecelDist" DisplayName="減速距離">
+                <Description><![CDATA[<p>減速距離</p>]]></Description>
+            </Parameter>
+            <Parameter Name="FullDist" DisplayName="合計距離">
+                <Description><![CDATA[<p>角度(度)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Output" DisplayName="パワー出力">
+                <Description><![CDATA[<p>パワー出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Finish" DisplayName="完了フラグ">
+                <Description><![CDATA[<p>完了フラグ</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1Output" DisplayName="エンコーダー 1 出力">
+                <Description><![CDATA[<p>エンコーダー出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2Output" DisplayName="エンコーダー 2 出力">
+                <Description><![CDATA[<p>エンコーダー出力</p>]]></Description>
+            </Parameter>
+            <Block Mode="ACDC_Output1Degs" DisplayName="加減速 (1エンコーダー)">
+                <Description><![CDATA[<p>加減速出力</p>]]></Description>
+            </Block>
+            <Block Mode="ACDC_Output2Degs" DisplayName="加減速 (2エンコーダー)">
+                <Description><![CDATA[<p>加減速出力</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="コントローラー設定">
+                <Description><![CDATA[<p>構成設定</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL MoveSync Controller" DisplayName="同期走行コントローラー - OFDL Dev." DisplayNamePrefix="OFDL MoveSync Controller">
+            <Parameter Name="Ports" DisplayName="ポート">
+                <Description><![CDATA[<p>ポート設定</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1" DisplayName="左エンコーダー入力">
+                <Description><![CDATA[<p>左側パワー</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2" DisplayName="右エンコーダー入力">
+                <Description><![CDATA[<p>右側パワー</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="Pゲイン">
+                <Description><![CDATA[<p>同期用Pゲイン</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power1" DisplayName="左モーターパワー">
+                <Description><![CDATA[<p>左側出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power2" DisplayName="右モーターパワー">
+                <Description><![CDATA[<p>右側出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="LeftInversed" DisplayName="左モーター反転">
+                <Description><![CDATA[<p>パワー出力反転</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RightInversed" DisplayName="右モーター反転">
+                <Description><![CDATA[<p>パワー出力反転</p>]]></Description>
+            </Parameter>
+            <Block Mode="SYNC_Std" DisplayName="同期走行">
+                <Description><![CDATA[<p>同期走行</p>]]></Description>
+            </Block>
+            <Block Mode="SYNC_byPwr" DisplayName="同期走行 (パワー入力)">
+                <Description><![CDATA[<p>同期走行 (パワー入力)</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="コントローラー設定">
+                <Description><![CDATA[<p>構成設定</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_RawMotor_Adv" DisplayName="高度なモーター制御(Raw) - OFDL Dev." DisplayNamePrefix="RawMotor_Adv">
+            <Parameter Name="Power" DisplayName="パワー">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="モーター A">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="モーター B">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="モーター C">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="モーター D">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Motor_Adv" DisplayName="高度なモーター制御 - OFDL Dev." DisplayNamePrefix="OFDL Motor Adv">
+            <Parameter Name="Power" DisplayName="パワー">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="モーター A">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="モーター B">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="モーター C">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="モーター D">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Encoder_Adv" DisplayName="高度なエンコーダー - OFDL Dev." DisplayNamePrefix="Encoder_Adv">
+            <Parameter Name="Degress" DisplayName="角度（度）">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Change" DisplayName="変化量">
+                <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+            </Parameter>
+            <Category Name="EncReset" DisplayName="エンコーダーのリセット">
+                <Block Mode="EncReset_A" DisplayName="モーター A">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_B" DisplayName="モーター B">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_C" DisplayName="モーター C">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_D" DisplayName="モーター D">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncReadChg" DisplayName="変化量の計測">
+                <Block Mode="EncReadChg_A" DisplayName="モーター A">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_B" DisplayName="モーター B">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_C" DisplayName="モーター C">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_D" DisplayName="モーター D">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncRead" DisplayName="角度の計測">
+                <Block Mode="EncRead_A" DisplayName="モーター A">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_B" DisplayName="モーター B">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_C" DisplayName="モーター C">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_D" DisplayName="モーター D">
+                    <Description><![CDATA[<p>詳細はOFDLウェブサイトをご覧ください</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="カラーセンサー速度コントローラー">
+            <Description><![CDATA[<p>2つのカラーセンサーの差に基づいてモーター速度を計算します（PDラインフォロー用）。</p>]]></Description>
+            <Block Mode="CS_Linear" DisplayName="CS 線形速度">
+                <Description><![CDATA[<p>誤差に比例して速度を線形に減少させます。ほとんどのラインフォロー用途に最適です。</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Quadratic" DisplayName="CS 二次速度">
+                <Description><![CDATA[<p>誤差の2乗で速度を減少させます。ライン付近では速く、外れると急減速します。</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Sqrt" DisplayName="CS 平方根速度">
+                <Description><![CDATA[<p>誤差の平方根で速度を減少させます。最初は急に、その後ゆっくり減速します。</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Step" DisplayName="CS ステップ速度">
+                <Description><![CDATA[<p>誤差のしきい値に基づいて3段階の速度を使用します。手動チューニングが簡単です。</p>]]></Description>
+            </Block>
+                        <Block Mode="CS_Cubic" DisplayName="CS 3乗速度 ★★★★★競技最速向け">
+                <Description><![CDATA[<p>誤差の3乗で速度を減少させます。ライン付近では最高速を維持し、大きくずれると急激に減速します。競技での最速タイムを目指す場合に最もおすすめです。</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Smooth" DisplayName="CS スムーズ速度 ★★★★安定走行推奨">
+                <Description><![CDATA[<p>スムーズステップ（3t²-2t³）で速度を減少させます。急な速度変化がなく滑らかに加減速します。安定したライン追従に最適です。</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="設定">
+                <Description><![CDATA[<p>カラーセンサー速度コントローラーのBaseSpeed、MinSpeed、MaxErrorを設定します。</p>]]></Description>
+            </Block>
+        </PolyGroup>
+    </PolyGroups>
+</EditorStrings>

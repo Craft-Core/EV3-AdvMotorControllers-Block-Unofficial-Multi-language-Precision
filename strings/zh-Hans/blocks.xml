@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EditorStrings>
+    <PolyGroups ModuleName="OFDL Advanced Motor Controllers">
+
+        <PolyGroup Name="OFDL PD Controller" DisplayName="PD控制器 - OFDL Dev." DisplayNamePrefix="OFDL PD Controller">
+            <Parameter Name="Ports" DisplayName="端口">
+                <Description><![CDATA[<p>传感器端口</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P1" DisplayName="传感器输入 1">
+                <Description><![CDATA[<p>传感器输入 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P2" DisplayName="传感器输入 2">
+                <Description><![CDATA[<p>传感器输入 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="P增益">
+                <Description><![CDATA[<p>设置P增益（比例控制）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kd" DisplayName="D增益">
+                <Description><![CDATA[<p>设置D增益（微分控制）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power" DisplayName="功率">
+                <Description><![CDATA[<p>设置基准功率</p>]]></Description>
+            </Parameter>
+
+            <Block Mode="Configuration" DisplayName="控制器设置">
+                <Description><![CDATA[<p>配置设置</p>]]></Description>
+            </Block>
+            <Category Name="P_byVars" DisplayName="P控制">
+                <Block Mode="P_Large" DisplayName="L马达">
+                    <Description><![CDATA[<p>L马达</p>]]></Description>
+                </Block>
+                <Block Mode="P_Medium" DisplayName="M马达">
+                    <Description><![CDATA[<p>M马达</p>]]></Description>
+                </Block>
+                <Block Mode="P_twoRev" DisplayName="双轮反转">
+                    <Description><![CDATA[<p>双轮反转</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PD_byVars" DisplayName="PD控制">
+                <Block Mode="PD_Large" DisplayName="L马达">
+                    <Description><![CDATA[<p>L马达</p>]]></Description>
+                </Block>
+                <Block Mode="PD_Medium" DisplayName="M马达">
+                    <Description><![CDATA[<p>M马达</p>]]></Description>
+                </Block>
+                <Block Mode="PD_twoRev" DisplayName="双轮反转">
+                    <Description><![CDATA[<p>双轮反转</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PDpwr_byVars" DisplayName="PD控制（功率输入）">
+                <Block Mode="PDpwr_Large" DisplayName="L马达">
+                    <Description><![CDATA[<p>L马达</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_Medium" DisplayName="M马达">
+                    <Description><![CDATA[<p>M马达</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_twoRev" DisplayName="双轮反转">
+                    <Description><![CDATA[<p>双轮反转</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL Acceleration Controller" DisplayName="加减速控制器 - OFDL Dev." DisplayNamePrefix="OFDL Acceleration Controller">
+            <Parameter Name="EncPort" DisplayName="端口">
+                <Description><![CDATA[<p>传感器端口</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxPwr" DisplayName="目标功率">
+                <Description><![CDATA[<p>最大功率</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinPwr" DisplayName="初始功率">
+                <Description><![CDATA[<p>最小功率</p>]]></Description>
+            </Parameter>
+            <Parameter Name="AccelDist" DisplayName="加速距离">
+                <Description><![CDATA[<p>加速距离</p>]]></Description>
+            </Parameter>
+            <Parameter Name="DecelDist" DisplayName="减速距离">
+                <Description><![CDATA[<p>减速距离</p>]]></Description>
+            </Parameter>
+            <Parameter Name="FullDist" DisplayName="总距离">
+                <Description><![CDATA[<p>角度（度）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Output" DisplayName="功率输出">
+                <Description><![CDATA[<p>功率输出</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Finish" DisplayName="完成标志">
+                <Description><![CDATA[<p>完成标志</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1Output" DisplayName="编码器 1 输出">
+                <Description><![CDATA[<p>编码器输出</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2Output" DisplayName="编码器 2 输出">
+                <Description><![CDATA[<p>编码器输出</p>]]></Description>
+            </Parameter>
+            <Block Mode="ACDC_Output1Degs" DisplayName="加减速（1编码器）">
+                <Description><![CDATA[<p>加减速输出</p>]]></Description>
+            </Block>
+            <Block Mode="ACDC_Output2Degs" DisplayName="加减速（2编码器）">
+                <Description><![CDATA[<p>加减速输出</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="控制器设置">
+                <Description><![CDATA[<p>配置设置</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL MoveSync Controller" DisplayName="同步行驶控制器 - OFDL Dev." DisplayNamePrefix="OFDL MoveSync Controller">
+            <Parameter Name="Ports" DisplayName="端口">
+                <Description><![CDATA[<p>端口设置</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1" DisplayName="左编码器输入">
+                <Description><![CDATA[<p>左侧功率</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2" DisplayName="右编码器输入">
+                <Description><![CDATA[<p>右侧功率</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="P增益">
+                <Description><![CDATA[<p>同步用P增益</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power1" DisplayName="左马达功率">
+                <Description><![CDATA[<p>左侧输出</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power2" DisplayName="右马达功率">
+                <Description><![CDATA[<p>右侧输出</p>]]></Description>
+            </Parameter>
+            <Parameter Name="LeftInversed" DisplayName="左马达反转">
+                <Description><![CDATA[<p>功率输出反转</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RightInversed" DisplayName="右马达反转">
+                <Description><![CDATA[<p>功率输出反转</p>]]></Description>
+            </Parameter>
+            <Block Mode="SYNC_Std" DisplayName="同步行驶">
+                <Description><![CDATA[<p>同步行驶</p>]]></Description>
+            </Block>
+            <Block Mode="SYNC_byPwr" DisplayName="同步行驶（功率输入）">
+                <Description><![CDATA[<p>同步行驶（功率输入）</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="控制器设置">
+                <Description><![CDATA[<p>配置设置</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_RawMotor_Adv" DisplayName="高级马达控制(Raw) - OFDL Dev." DisplayNamePrefix="RawMotor_Adv">
+            <Parameter Name="Power" DisplayName="功率">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="马达 A">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="马达 B">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="马达 C">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="马达 D">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Motor_Adv" DisplayName="高级马达控制 - OFDL Dev." DisplayNamePrefix="OFDL Motor Adv">
+            <Parameter Name="Power" DisplayName="功率">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="马达 A">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="马达 B">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="马达 C">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="马达 D">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Encoder_Adv" DisplayName="高级编码器 - OFDL Dev." DisplayNamePrefix="Encoder_Adv">
+            <Parameter Name="Degress" DisplayName="角度（度）">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Change" DisplayName="变化量">
+                <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+            </Parameter>
+            <Category Name="EncReset" DisplayName="编码器重置">
+                <Block Mode="EncReset_A" DisplayName="马达 A">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_B" DisplayName="马达 B">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_C" DisplayName="马达 C">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_D" DisplayName="马达 D">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncReadChg" DisplayName="变化量测量">
+                <Block Mode="EncReadChg_A" DisplayName="马达 A">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_B" DisplayName="马达 B">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_C" DisplayName="马达 C">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_D" DisplayName="马达 D">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncRead" DisplayName="角度测量">
+                <Block Mode="EncRead_A" DisplayName="马达 A">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_B" DisplayName="马达 B">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_C" DisplayName="马达 C">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_D" DisplayName="马达 D">
+                    <Description><![CDATA[<p>详情请访问OFDL网站</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="Color Sensor Speed Controller">
+            <Description><![CDATA[<p>Calculates motor speed based on the difference between two color sensor values for PD line following.</p>]]></Description>
+            <Block Mode="CS_Linear" DisplayName="CS Linear Speed">
+                <Description><![CDATA[<p>Linearly reduces speed proportional to the color sensor error. Recommended for most line-following tasks.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Quadratic" DisplayName="CS Quadratic Speed">
+                <Description><![CDATA[<p>Reduces speed with the square of the error. Stays fast near the line and drops quickly when off-track.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Sqrt" DisplayName="CS Sqrt Speed">
+                <Description><![CDATA[<p>Reduces speed with the square root of the error. Drops quickly for small errors, gentler for large ones.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Step" DisplayName="CS Step Speed">
+                <Description><![CDATA[<p>Uses three discrete speed levels based on error thresholds. Easy to tune manually.</p>]]></Description>
+            </Block>
+                        <Block Mode="CS_Cubic" DisplayName="CS Cubic Speed ★★★★★ Best for competition">
+                <Description><![CDATA[<p>Reduces speed with the cube of the error. Stays at maximum speed near the line and drops steeply when off-track. Recommended most for competition fastest-lap scenarios.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Smooth" DisplayName="CS Smooth Speed ★★★★ Stable recommended">
+                <Description><![CDATA[<p>Uses smoothstep curve (3t-2t3) for speed reduction. No abrupt speed changes - accelerates and decelerates smoothly. Best for stable line following.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuration">
+                <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
+            </Block>
+        </PolyGroup>
+    </PolyGroups>
+</EditorStrings>

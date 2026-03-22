@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EditorStrings>
+    <PolyGroups ModuleName="OFDL Advanced Motor Controllers">
+
+        <PolyGroup Name="OFDL PD Controller" DisplayName="Controlador PD - OFDL Dev." DisplayNamePrefix="OFDL PD Controller">
+            <Parameter Name="Ports" DisplayName="Porta">
+                <Description><![CDATA[<p>Porta do sensor</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P1" DisplayName="Entrada do sensor 1">
+                <Description><![CDATA[<p>Entrada do sensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P2" DisplayName="Entrada do sensor 2">
+                <Description><![CDATA[<p>Entrada do sensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="Ganho P">
+                <Description><![CDATA[<p>Configurar ganho P (controle proporcional)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kd" DisplayName="Ganho D">
+                <Description><![CDATA[<p>Configurar ganho D (controle derivativo)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power" DisplayName="Potencia">
+                <Description><![CDATA[<p>Configurar potencia base</p>]]></Description>
+            </Parameter>
+
+            <Block Mode="Configuration" DisplayName="Configuracao do controlador">
+                <Description><![CDATA[<p>Configuracao</p>]]></Description>
+            </Block>
+            <Category Name="P_byVars" DisplayName="Controlador P">
+                <Block Mode="P_Large" DisplayName="Motor L">
+                    <Description><![CDATA[<p>Motor L</p>]]></Description>
+                </Block>
+                <Block Mode="P_Medium" DisplayName="Motor M">
+                    <Description><![CDATA[<p>Motor M</p>]]></Description>
+                </Block>
+                <Block Mode="P_twoRev" DisplayName="Inverter ambos">
+                    <Description><![CDATA[<p>Inverter ambos</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PD_byVars" DisplayName="Controlador PD">
+                <Block Mode="PD_Large" DisplayName="Motor L">
+                    <Description><![CDATA[<p>Motor L</p>]]></Description>
+                </Block>
+                <Block Mode="PD_Medium" DisplayName="Motor M">
+                    <Description><![CDATA[<p>Motor M</p>]]></Description>
+                </Block>
+                <Block Mode="PD_twoRev" DisplayName="Inverter ambos">
+                    <Description><![CDATA[<p>Inverter ambos</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="PDpwr_byVars" DisplayName="Controlador PD (com entrada de potencia)">
+                <Block Mode="PDpwr_Large" DisplayName="Motor L">
+                    <Description><![CDATA[<p>Motor L</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_Medium" DisplayName="Motor M">
+                    <Description><![CDATA[<p>Motor M</p>]]></Description>
+                </Block>
+                <Block Mode="PDpwr_twoRev" DisplayName="Inverter ambos">
+                    <Description><![CDATA[<p>Inverter ambos</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL Acceleration Controller" DisplayName="Controlador de aceleracao - OFDL Dev." DisplayNamePrefix="OFDL Acceleration Controller">
+            <Parameter Name="EncPort" DisplayName="Porta">
+                <Description><![CDATA[<p>Porta do sensor</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxPwr" DisplayName="Potencia alvo">
+                <Description><![CDATA[<p>Potencia maxima</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinPwr" DisplayName="Potencia inicial">
+                <Description><![CDATA[<p>Potencia minima</p>]]></Description>
+            </Parameter>
+            <Parameter Name="AccelDist" DisplayName="Distancia de aceleracao">
+                <Description><![CDATA[<p>Distancia de aceleracao</p>]]></Description>
+            </Parameter>
+            <Parameter Name="DecelDist" DisplayName="Distancia de desaceleracao">
+                <Description><![CDATA[<p>Distancia de desaceleracao</p>]]></Description>
+            </Parameter>
+            <Parameter Name="FullDist" DisplayName="Distancia total">
+                <Description><![CDATA[<p>Angulo (graus)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Output" DisplayName="Saida de potencia">
+                <Description><![CDATA[<p>Saida de potencia</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Finish" DisplayName="Indicador de conclusao">
+                <Description><![CDATA[<p>Indicador de conclusao</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1Output" DisplayName="Saida do encoder 1">
+                <Description><![CDATA[<p>Saida do encoder</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2Output" DisplayName="Saida do encoder 2">
+                <Description><![CDATA[<p>Saida do encoder</p>]]></Description>
+            </Parameter>
+            <Block Mode="ACDC_Output1Degs" DisplayName="Aceleracao (1 encoder)">
+                <Description><![CDATA[<p>Saida de aceleracao/desaceleracao</p>]]></Description>
+            </Block>
+            <Block Mode="ACDC_Output2Degs" DisplayName="Aceleracao (2 encoders)">
+                <Description><![CDATA[<p>Saida de aceleracao/desaceleracao</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuracao do controlador">
+                <Description><![CDATA[<p>Configuracao</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL MoveSync Controller" DisplayName="Controlador de sincronizacao - OFDL Dev." DisplayNamePrefix="OFDL MoveSync Controller">
+            <Parameter Name="Ports" DisplayName="Porta">
+                <Description><![CDATA[<p>Configuracao da porta</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E1" DisplayName="Entrada do encoder esquerdo">
+                <Description><![CDATA[<p>Potencia esquerda</p>]]></Description>
+            </Parameter>
+            <Parameter Name="E2" DisplayName="Entrada do encoder direito">
+                <Description><![CDATA[<p>Potencia direita</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Kp" DisplayName="Ganho P">
+                <Description><![CDATA[<p>Ganho P para sincronizacao</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power1" DisplayName="Potencia do motor esquerdo">
+                <Description><![CDATA[<p>Saida esquerda</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Power2" DisplayName="Potencia do motor direito">
+                <Description><![CDATA[<p>Saida direita</p>]]></Description>
+            </Parameter>
+            <Parameter Name="LeftInversed" DisplayName="Inverter motor esquerdo">
+                <Description><![CDATA[<p>Inverter saida de potencia</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RightInversed" DisplayName="Inverter motor direito">
+                <Description><![CDATA[<p>Inverter saida de potencia</p>]]></Description>
+            </Parameter>
+            <Block Mode="SYNC_Std" DisplayName="Movimento sincronizado">
+                <Description><![CDATA[<p>Movimento sincronizado</p>]]></Description>
+            </Block>
+            <Block Mode="SYNC_byPwr" DisplayName="Movimento sincronizado (com entrada de potencia)">
+                <Description><![CDATA[<p>Movimento sincronizado (com entrada de potencia)</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuracao do controlador">
+                <Description><![CDATA[<p>Configuracao</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_RawMotor_Adv" DisplayName="Controle de motor avancado (Raw) - OFDL Dev." DisplayNamePrefix="RawMotor_Adv">
+            <Parameter Name="Power" DisplayName="Potencia">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="Motor A">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="Motor B">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="Motor C">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="Motor D">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Motor_Adv" DisplayName="Controle de motor avancado - OFDL Dev." DisplayNamePrefix="OFDL Motor Adv">
+            <Parameter Name="Power" DisplayName="Potencia">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Parameter>
+            <Block Mode="MT_A" DisplayName="Motor A">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_B" DisplayName="Motor B">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_C" DisplayName="Motor C">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+            <Block Mode="MT_D" DisplayName="Motor D">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Block>
+        </PolyGroup>
+
+        <PolyGroup Name="OFDL_Encoder_Adv" DisplayName="Encoder avancado - OFDL Dev." DisplayNamePrefix="Encoder_Adv">
+            <Parameter Name="Degress" DisplayName="Angulo (graus)">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Parameter>
+            <Parameter Name="Change" DisplayName="Variacao">
+                <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+            </Parameter>
+            <Category Name="EncReset" DisplayName="Reiniciar encoder">
+                <Block Mode="EncReset_A" DisplayName="Motor A">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_B" DisplayName="Motor B">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_C" DisplayName="Motor C">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReset_D" DisplayName="Motor D">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncReadChg" DisplayName="Medir variacao">
+                <Block Mode="EncReadChg_A" DisplayName="Motor A">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_B" DisplayName="Motor B">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_C" DisplayName="Motor C">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncReadChg_D" DisplayName="Motor D">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+            </Category>
+            <Category Name="EncRead" DisplayName="Medir angulo">
+                <Block Mode="EncRead_A" DisplayName="Motor A">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_B" DisplayName="Motor B">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_C" DisplayName="Motor C">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+                <Block Mode="EncRead_D" DisplayName="Motor D">
+                    <Description><![CDATA[<p>Visite o site da OFDL para mais informacoes</p>]]></Description>
+                </Block>
+            </Category>
+        </PolyGroup>
+        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="Color Sensor Speed Controller">
+            <Description><![CDATA[<p>Calculates motor speed based on the difference between two color sensor values for PD line following.</p>]]></Description>
+            <Block Mode="CS_Linear" DisplayName="CS Linear Speed">
+                <Description><![CDATA[<p>Linearly reduces speed proportional to the color sensor error. Recommended for most line-following tasks.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Quadratic" DisplayName="CS Quadratic Speed">
+                <Description><![CDATA[<p>Reduces speed with the square of the error. Stays fast near the line and drops quickly when off-track.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Sqrt" DisplayName="CS Sqrt Speed">
+                <Description><![CDATA[<p>Reduces speed with the square root of the error. Drops quickly for small errors, gentler for large ones.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Step" DisplayName="CS Step Speed">
+                <Description><![CDATA[<p>Uses three discrete speed levels based on error thresholds. Easy to tune manually.</p>]]></Description>
+            </Block>
+                        <Block Mode="CS_Cubic" DisplayName="CS Cubic Speed ★★★★★ Best for competition">
+                <Description><![CDATA[<p>Reduces speed with the cube of the error. Stays at maximum speed near the line and drops steeply when off-track. Recommended most for competition fastest-lap scenarios.</p>]]></Description>
+            </Block>
+            <Block Mode="CS_Smooth" DisplayName="CS Smooth Speed ★★★★ Stable recommended">
+                <Description><![CDATA[<p>Uses smoothstep curve (3t-2t3) for speed reduction. No abrupt speed changes - accelerates and decelerates smoothly. Best for stable line following.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuration">
+                <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
+            </Block>
+        </PolyGroup>
+    </PolyGroups>
+</EditorStrings>
