@@ -224,7 +224,31 @@
                 </Block>
             </Category>
         </PolyGroup>
-        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="Color Sensor Speed Controller">
+        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="Color Sensor Speed Controller" DisplayNamePrefix="OFDL PD ColorSpeed Controller">
+            <Parameter Name="P1" DisplayName="Color Sensor Input 1">
+                <Description><![CDATA[<p>Color Sensor Input 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P2" DisplayName="Color Sensor Input 2">
+                <Description><![CDATA[<p>Color Sensor Input 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Base Speed">
+                <Description><![CDATA[<p>Base speed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Minimum Speed">
+                <Description><![CDATA[<p>Minimum speed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Maximum Error">
+                <Description><![CDATA[<p>Maximum error</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SpeedOut" DisplayName="Speed Output">
+                <Description><![CDATA[<p>Speed output</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS1Out" DisplayName="Color Sensor 1 Output">
+                <Description><![CDATA[<p>Color sensor output</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Out" DisplayName="Color Sensor 2 Output">
+                <Description><![CDATA[<p>Color sensor output</p>]]></Description>
+            </Parameter>
             <Description><![CDATA[<p>Calculates motor speed based on the difference between two color sensor values for PD line following.</p>]]></Description>
             <Block Mode="CS_Linear" DisplayName="CS Linear Speed">
                 <Description><![CDATA[<p>Linearly reduces speed proportional to the color sensor error. Recommended for most line-following tasks.</p>]]></Description>

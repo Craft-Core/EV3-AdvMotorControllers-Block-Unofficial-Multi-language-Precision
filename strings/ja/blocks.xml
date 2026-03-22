@@ -224,7 +224,31 @@
                 </Block>
             </Category>
         </PolyGroup>
-        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="カラーセンサー速度コントローラー">
+        <PolyGroup Name="OFDL PD ColorSpeed Controller" DisplayName="カラーセンサー速度コントローラー" DisplayNamePrefix="OFDL PD ColorSpeed Controller">
+            <Parameter Name="P1" DisplayName="カラーセンサー入力 1">
+                <Description><![CDATA[<p>カラーセンサー入力 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="P2" DisplayName="カラーセンサー入力 2">
+                <Description><![CDATA[<p>カラーセンサー入力 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="基準速度">
+                <Description><![CDATA[<p>基準速度</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="最低速度">
+                <Description><![CDATA[<p>最低速度</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="最大誤差">
+                <Description><![CDATA[<p>最大誤差</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SpeedOut" DisplayName="速度出力">
+                <Description><![CDATA[<p>速度出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS1Out" DisplayName="カラーセンサー 1 出力">
+                <Description><![CDATA[<p>カラーセンサー出力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Out" DisplayName="カラーセンサー 2 出力">
+                <Description><![CDATA[<p>カラーセンサー出力</p>]]></Description>
+            </Parameter>
             <Description><![CDATA[<p>2つのカラーセンサーの差に基づいてモーター速度を計算します（PDラインフォロー用）。</p>]]></Description>
             <Block Mode="CS_Linear" DisplayName="CS 線形速度">
                 <Description><![CDATA[<p>誤差に比例して速度を線形に減少させます。ほとんどのラインフォロー用途に最適です。</p>]]></Description>
