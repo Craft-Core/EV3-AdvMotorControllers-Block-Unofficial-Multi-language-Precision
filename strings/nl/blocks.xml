@@ -278,5 +278,25 @@
                 <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS Calibration" DisplayName="CS Kalibratie - OFDL Dev." DisplayNamePrefix="OFDL CS Calibration">
+            <Parameter Name="RawValue" DisplayName="Ruwe sensorwaarde">
+                <Description><![CDATA[<p>Invoer ruwe sensorwaarde</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Witte waarde">
+                <Description><![CDATA[<p>Kalibratie witte waarde</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Zwarte waarde">
+                <Description><![CDATA[<p>Kalibratie zwarte waarde</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormValue" DisplayName="Genormaliseerde waarde">
+                <Description><![CDATA[<p>Genormaliseerde sensorwaarde (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="CSCal_Normalize" DisplayName="CS Normaliseren">
+                <Description><![CDATA[<p>Normaliseert de ruwe sensorwaarde naar 0-100 met behulp van opgeslagen wit/zwart kalibratiewaarden.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Kalibratieconfiguratie">
+                <Description><![CDATA[<p>Slaat witte en zwarte kalibratiewaarden op voor kleursensotnormalisatie.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

@@ -278,5 +278,25 @@
                 <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS Calibration" DisplayName="CS 校准 - OFDL Dev." DisplayNamePrefix="OFDL CS Calibration">
+            <Parameter Name="RawValue" DisplayName="原始传感器值">
+                <Description><![CDATA[<p>原始传感器值输入</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="白色值">
+                <Description><![CDATA[<p>白色校准值</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="黑色值">
+                <Description><![CDATA[<p>黑色校准值</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormValue" DisplayName="归一化值">
+                <Description><![CDATA[<p>归一化传感器值（0-100）</p>]]></Description>
+            </Parameter>
+            <Block Mode="CSCal_Normalize" DisplayName="CS 归一化">
+                <Description><![CDATA[<p>使用存储的白/黑校准值将原始传感器值归一化为0-100。</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="校准设置">
+                <Description><![CDATA[<p>存储白色和黑色校准值，用于颜色传感器归一化。</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

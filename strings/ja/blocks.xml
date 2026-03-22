@@ -278,5 +278,25 @@
                 <Description><![CDATA[<p>カラーセンサー速度コントローラーのBaseSpeed、MinSpeed、MaxErrorを設定します。</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS Calibration" DisplayName="CS キャリブレーション - OFDL Dev." DisplayNamePrefix="OFDL CS Calibration">
+            <Parameter Name="RawValue" DisplayName="生センサー値">
+                <Description><![CDATA[<p>生センサー値の入力</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="白値">
+                <Description><![CDATA[<p>白キャリブレーション値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="黒値">
+                <Description><![CDATA[<p>黒キャリブレーション値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormValue" DisplayName="正規化値">
+                <Description><![CDATA[<p>正規化されたセンサー値（0〜100）</p>]]></Description>
+            </Parameter>
+            <Block Mode="CSCal_Normalize" DisplayName="CS 正規化">
+                <Description><![CDATA[<p>白・黒キャリブレーション値を使用して生センサー値を0〜100に正規化します。</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="キャリブレーション設定">
+                <Description><![CDATA[<p>カラーセンサー正規化用の白・黒キャリブレーション値を保存します。</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

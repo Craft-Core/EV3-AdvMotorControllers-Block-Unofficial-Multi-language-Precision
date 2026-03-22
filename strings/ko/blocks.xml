@@ -278,5 +278,25 @@
                 <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS Calibration" DisplayName="CS 캘리브레이션 - OFDL Dev." DisplayNamePrefix="OFDL CS Calibration">
+            <Parameter Name="RawValue" DisplayName="원시 센서 값">
+                <Description><![CDATA[<p>원시 센서 값 입력</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="흰색 값">
+                <Description><![CDATA[<p>흰색 교정 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="검은색 값">
+                <Description><![CDATA[<p>검은색 교정 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormValue" DisplayName="정규화 값">
+                <Description><![CDATA[<p>정규화된 센서 값 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="CSCal_Normalize" DisplayName="CS 정규화">
+                <Description><![CDATA[<p>저장된 흰색/검은색 교정 값을 사용하여 원시 센서 값을 0-100으로 정규화합니다.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="교정 설정">
+                <Description><![CDATA[<p>컬러 센서 정규화를 위한 흰색 및 검은색 교정 값을 저장합니다.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

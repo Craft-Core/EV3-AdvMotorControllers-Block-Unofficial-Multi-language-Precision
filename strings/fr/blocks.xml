@@ -278,5 +278,25 @@
                 <Description><![CDATA[<p>Sets BaseSpeed, MinSpeed, and MaxError configuration values for the Color Sensor Speed Controller.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS Calibration" DisplayName="Étalonnage CS - OFDL Dev." DisplayNamePrefix="OFDL CS Calibration">
+            <Parameter Name="RawValue" DisplayName="Valeur brute du capteur">
+                <Description><![CDATA[<p>Entrée de valeur brute du capteur</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Valeur blanche">
+                <Description><![CDATA[<p>Valeur d'étalonnage blanc</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Valeur noire">
+                <Description><![CDATA[<p>Valeur d'étalonnage noir</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormValue" DisplayName="Valeur normalisée">
+                <Description><![CDATA[<p>Valeur normalisée du capteur (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="CSCal_Normalize" DisplayName="CS Normaliser">
+                <Description><![CDATA[<p>Normalise la valeur brute du capteur à 0-100 en utilisant les valeurs d'étalonnage blanc/noir.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuration d'étalonnage">
+                <Description><![CDATA[<p>Stocke les valeurs d'étalonnage blanc et noir pour la normalisation du capteur de couleur.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>
