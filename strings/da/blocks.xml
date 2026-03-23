@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Gemmer hvide og sorte kalibreringsværdier til farvsensornormalisering.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="Farvsensor API - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Farvsensor 1 Port">
+                <Description><![CDATA[<p>Portnummer for farvsensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Farvsensor 2 Port">
+                <Description><![CDATA[<p>Portnummer for farvsensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Hvid Værdi">
+                <Description><![CDATA[<p>Hvid kalibrationsværdi</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Sort Værdi">
+                <Description><![CDATA[<p>Sort kalibrationsværdi</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Basishastighed">
+                <Description><![CDATA[<p>Basishastighed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Minimumshastighed">
+                <Description><![CDATA[<p>Minimumshastighed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Maksimal Fejl">
+                <Description><![CDATA[<p>Maksimal fejl</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Aktiver Glatning">
+                <Description><![CDATA[<p>Aktiver jævn hastighedsovergang</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Glatningsniveau">
+                <Description><![CDATA[<p>Glatningsniveau (1=øjeblikkeligt, 100=meget gradvist)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Rå CS1 Udgang">
+                <Description><![CDATA[<p>Rå værdi fra farvsensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Rå CS2 Udgang">
+                <Description><![CDATA[<p>Rå værdi fra farvsensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Normaliseret CS1 Udgang">
+                <Description><![CDATA[<p>Normaliseret værdi fra farvsensor 1 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Normaliseret CS2 Udgang">
+                <Description><![CDATA[<p>Normaliseret værdi fra farvsensor 2 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Hent Rå CS1">
+                <Description><![CDATA[<p>Læser den rå reflekterede intensitetsværdi fra farvsensor 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Hent Rå CS2">
+                <Description><![CDATA[<p>Læser den rå reflekterede intensitetsværdi fra farvsensor 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Hent Normaliseret CS1">
+                <Description><![CDATA[<p>Læser og normaliserer farvsensor 1 værdien til 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Hent Normaliseret CS2">
+                <Description><![CDATA[<p>Læser og normaliserer farvsensor 2 værdien til 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Hent Begge Normaliserede">
+                <Description><![CDATA[<p>Læser og normaliserer begge farvsensorværdier til 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API Konfiguration">
+                <Description><![CDATA[<p>Gemmer portnumre og kontrollerparametre for farvsensor API.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

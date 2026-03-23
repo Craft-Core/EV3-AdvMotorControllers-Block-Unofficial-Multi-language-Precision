@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>カラーセンサー正規化用の白・黒キャリブレーション値を保存します。</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="カラーセンサーAPI - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="カラーセンサー1 ポート">
+                <Description><![CDATA[<p>カラーセンサー1のポート番号</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="カラーセンサー2 ポート">
+                <Description><![CDATA[<p>カラーセンサー2のポート番号</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="白の値">
+                <Description><![CDATA[<p>白のキャリブレーション値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="黒の値">
+                <Description><![CDATA[<p>黒のキャリブレーション値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="基本速度">
+                <Description><![CDATA[<p>基本速度</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="最低速度">
+                <Description><![CDATA[<p>最低速度</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="最大誤差">
+                <Description><![CDATA[<p>最大誤差</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="スムーズ有効">
+                <Description><![CDATA[<p>スムーズな速度変化を有効にする</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="スムーズレベル">
+                <Description><![CDATA[<p>スムーズレベル（1=即時、100=非常に緩やか）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="生の値 CS1 出力">
+                <Description><![CDATA[<p>カラーセンサー1の生の値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="生の値 CS2 出力">
+                <Description><![CDATA[<p>カラーセンサー2の生の値</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="正規化 CS1 出力">
+                <Description><![CDATA[<p>カラーセンサー1の正規化値（0〜100）</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="正規化 CS2 出力">
+                <Description><![CDATA[<p>カラーセンサー2の正規化値（0〜100）</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="生の値取得 CS1">
+                <Description><![CDATA[<p>カラーセンサー1から生の反射強度値を読み取ります。</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="生の値取得 CS2">
+                <Description><![CDATA[<p>カラーセンサー2から生の反射強度値を読み取ります。</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="正規化取得 CS1">
+                <Description><![CDATA[<p>カラーセンサー1の値を読み取り、0〜100に正規化します。</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="正規化取得 CS2">
+                <Description><![CDATA[<p>カラーセンサー2の値を読み取り、0〜100に正規化します。</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="両方の正規化取得">
+                <Description><![CDATA[<p>両方のカラーセンサー値を読み取り、0〜100に正規化します。</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API 設定">
+                <Description><![CDATA[<p>カラーセンサーAPIのポート番号とコントローラーパラメーターを設定します。</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

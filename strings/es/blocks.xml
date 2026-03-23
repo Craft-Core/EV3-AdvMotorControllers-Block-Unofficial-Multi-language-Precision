@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Almacena los valores de calibración blanco y negro para la normalización del sensor de color.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="API Sensor Color - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Puerto Sensor Color 1">
+                <Description><![CDATA[<p>Número de puerto del sensor de color 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Puerto Sensor Color 2">
+                <Description><![CDATA[<p>Número de puerto del sensor de color 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Valor Blanco">
+                <Description><![CDATA[<p>Valor de calibración blanco</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Valor Negro">
+                <Description><![CDATA[<p>Valor de calibración negro</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Velocidad Base">
+                <Description><![CDATA[<p>Velocidad base</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Velocidad Mínima">
+                <Description><![CDATA[<p>Velocidad mínima</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Error Máximo">
+                <Description><![CDATA[<p>Error máximo</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Activar Suavizado">
+                <Description><![CDATA[<p>Activar transición de velocidad suave</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Nivel de Suavizado">
+                <Description><![CDATA[<p>Nivel de suavizado (1=instantáneo, 100=muy gradual)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Salida Bruta CS1">
+                <Description><![CDATA[<p>Valor bruto del sensor de color 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Salida Bruta CS2">
+                <Description><![CDATA[<p>Valor bruto del sensor de color 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Salida Normalizada CS1">
+                <Description><![CDATA[<p>Valor normalizado del sensor de color 1 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Salida Normalizada CS2">
+                <Description><![CDATA[<p>Valor normalizado del sensor de color 2 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Obtener Bruto CS1">
+                <Description><![CDATA[<p>Lee el valor de intensidad reflejada bruta del sensor de color 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Obtener Bruto CS2">
+                <Description><![CDATA[<p>Lee el valor de intensidad reflejada bruta del sensor de color 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Obtener Normalizado CS1">
+                <Description><![CDATA[<p>Lee y normaliza el valor del sensor de color 1 a 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Obtener Normalizado CS2">
+                <Description><![CDATA[<p>Lee y normaliza el valor del sensor de color 2 a 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Obtener Ambos Normalizados">
+                <Description><![CDATA[<p>Lee y normaliza ambos valores de sensor de color a 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuración API">
+                <Description><![CDATA[<p>Almacena números de puerto y parámetros del controlador para la API de sensor de color.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

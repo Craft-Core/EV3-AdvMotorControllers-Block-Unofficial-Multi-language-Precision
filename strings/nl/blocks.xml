@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Slaat witte en zwarte kalibratiewaarden op voor kleursensotnormalisatie.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="Kleursensor API - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Kleursensor 1 Poort">
+                <Description><![CDATA[<p>Poortnummer voor kleursensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Kleursensor 2 Poort">
+                <Description><![CDATA[<p>Poortnummer voor kleursensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Witte Waarde">
+                <Description><![CDATA[<p>Kalibreerwaarde voor wit</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Zwarte Waarde">
+                <Description><![CDATA[<p>Kalibreerwaarde voor zwart</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Basissnelheid">
+                <Description><![CDATA[<p>Basissnelheid</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Minimumsnelheid">
+                <Description><![CDATA[<p>Minimumsnelheid</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Maximale Fout">
+                <Description><![CDATA[<p>Maximale fout</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Vloeiend Inschakelen">
+                <Description><![CDATA[<p>Vloeiende snelheidsovergang inschakelen</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Vloeiendheidsniveau">
+                <Description><![CDATA[<p>Vloeiendheidsniveau (1=direct, 100=zeer geleidelijk)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Ruwe CS1 Uitgang">
+                <Description><![CDATA[<p>Ruwe waarde van kleursensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Ruwe CS2 Uitgang">
+                <Description><![CDATA[<p>Ruwe waarde van kleursensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Genormaliseerde CS1 Uitgang">
+                <Description><![CDATA[<p>Genormaliseerde waarde van kleursensor 1 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Genormaliseerde CS2 Uitgang">
+                <Description><![CDATA[<p>Genormaliseerde waarde van kleursensor 2 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Haal Ruwe CS1">
+                <Description><![CDATA[<p>Leest de ruwe gereflecteerde intensiteitswaarde van kleursensor 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Haal Ruwe CS2">
+                <Description><![CDATA[<p>Leest de ruwe gereflecteerde intensiteitswaarde van kleursensor 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Haal Genormaliseerde CS1">
+                <Description><![CDATA[<p>Leest en normaliseert de waarde van kleursensor 1 naar 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Haal Genormaliseerde CS2">
+                <Description><![CDATA[<p>Leest en normaliseert de waarde van kleursensor 2 naar 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Haal Beide Genormaliseerd">
+                <Description><![CDATA[<p>Leest en normaliseert beide kleursensorwaarden naar 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API Configuratie">
+                <Description><![CDATA[<p>Slaat poortnummers en regelaarparameters op voor de kleursensor API.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Armazena os valores de calibração branco e preto para a normalização do sensor de cor.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="API Sensor de Cor - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Porta Sensor de Cor 1">
+                <Description><![CDATA[<p>Número de porta do sensor de cor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Porta Sensor de Cor 2">
+                <Description><![CDATA[<p>Número de porta do sensor de cor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Valor Branco">
+                <Description><![CDATA[<p>Valor de calibração branco</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Valor Preto">
+                <Description><![CDATA[<p>Valor de calibração preto</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Velocidade Base">
+                <Description><![CDATA[<p>Velocidade base</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Velocidade Mínima">
+                <Description><![CDATA[<p>Velocidade mínima</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Erro Máximo">
+                <Description><![CDATA[<p>Erro máximo</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Ativar Suavização">
+                <Description><![CDATA[<p>Ativar transição de velocidade suave</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Nível de Suavização">
+                <Description><![CDATA[<p>Nível de suavização (1=instantâneo, 100=muito gradual)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Saída Bruta CS1">
+                <Description><![CDATA[<p>Valor bruto do sensor de cor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Saída Bruta CS2">
+                <Description><![CDATA[<p>Valor bruto do sensor de cor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Saída Normalizada CS1">
+                <Description><![CDATA[<p>Valor normalizado do sensor de cor 1 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Saída Normalizada CS2">
+                <Description><![CDATA[<p>Valor normalizado do sensor de cor 2 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Obter Bruto CS1">
+                <Description><![CDATA[<p>Lê o valor de intensidade refletida bruta do sensor de cor 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Obter Bruto CS2">
+                <Description><![CDATA[<p>Lê o valor de intensidade refletida bruta do sensor de cor 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Obter Normalizado CS1">
+                <Description><![CDATA[<p>Lê e normaliza o valor do sensor de cor 1 para 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Obter Normalizado CS2">
+                <Description><![CDATA[<p>Lê e normaliza o valor do sensor de cor 2 para 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Obter Ambos Normalizados">
+                <Description><![CDATA[<p>Lê e normaliza ambos os valores do sensor de cor para 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="Configuração API">
+                <Description><![CDATA[<p>Armazena números de porta e parâmetros do controlador para a API de sensor de cor.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

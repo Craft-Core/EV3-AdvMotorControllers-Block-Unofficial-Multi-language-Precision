@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Stores white and black calibration values for color sensor normalization.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="CS Sensor API - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Color Sensor 1 Port">
+                <Description><![CDATA[<p>Port number for color sensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Color Sensor 2 Port">
+                <Description><![CDATA[<p>Port number for color sensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="White Value">
+                <Description><![CDATA[<p>White calibration value</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Black Value">
+                <Description><![CDATA[<p>Black calibration value</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Base Speed">
+                <Description><![CDATA[<p>Base speed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Minimum Speed">
+                <Description><![CDATA[<p>Minimum speed</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Maximum Error">
+                <Description><![CDATA[<p>Maximum error</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Smooth Enable">
+                <Description><![CDATA[<p>Enable smooth speed transition</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Smooth Level">
+                <Description><![CDATA[<p>Smoothness level (1=instant, 100=very gradual)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Raw CS1 Output">
+                <Description><![CDATA[<p>Raw color sensor 1 value</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Raw CS2 Output">
+                <Description><![CDATA[<p>Raw color sensor 2 value</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Normalized CS1 Output">
+                <Description><![CDATA[<p>Normalized color sensor 1 value (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Normalized CS2 Output">
+                <Description><![CDATA[<p>Normalized color sensor 2 value (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Get Raw CS1">
+                <Description><![CDATA[<p>Reads the raw reflected intensity value from color sensor 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Get Raw CS2">
+                <Description><![CDATA[<p>Reads the raw reflected intensity value from color sensor 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Get Normalized CS1">
+                <Description><![CDATA[<p>Reads and normalizes color sensor 1 value to 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Get Normalized CS2">
+                <Description><![CDATA[<p>Reads and normalizes color sensor 2 value to 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Get Both Normalized">
+                <Description><![CDATA[<p>Reads and normalizes both color sensor values to 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API Configuration">
+                <Description><![CDATA[<p>Stores port numbers and controller parameters for the CS Sensor API.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

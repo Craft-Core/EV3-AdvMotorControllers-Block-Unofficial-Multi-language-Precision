@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>컬러 센서 정규화를 위한 흰색 및 검은색 교정 값을 저장합니다.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="컬러센서 API - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="컬러센서 1 포트">
+                <Description><![CDATA[<p>컬러센서 1의 포트 번호</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="컬러센서 2 포트">
+                <Description><![CDATA[<p>컬러센서 2의 포트 번호</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="흰색 값">
+                <Description><![CDATA[<p>흰색 보정 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="검은색 값">
+                <Description><![CDATA[<p>검은색 보정 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="기본 속도">
+                <Description><![CDATA[<p>기본 속도</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="최소 속도">
+                <Description><![CDATA[<p>최소 속도</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="최대 오차">
+                <Description><![CDATA[<p>최대 오차</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="스무딩 활성화">
+                <Description><![CDATA[<p>부드러운 속도 전환 활성화</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="스무딩 레벨">
+                <Description><![CDATA[<p>스무딩 레벨 (1=즉시, 100=매우 점진적)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="원시 CS1 출력">
+                <Description><![CDATA[<p>컬러센서 1의 원시 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="원시 CS2 출력">
+                <Description><![CDATA[<p>컬러센서 2의 원시 값</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="정규화 CS1 출력">
+                <Description><![CDATA[<p>컬러센서 1의 정규화 값 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="정규화 CS2 출력">
+                <Description><![CDATA[<p>컬러센서 2의 정규화 값 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="원시 CS1 가져오기">
+                <Description><![CDATA[<p>컬러센서 1에서 반사 강도 원시 값을 읽습니다.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="원시 CS2 가져오기">
+                <Description><![CDATA[<p>컬러센서 2에서 반사 강도 원시 값을 읽습니다.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="정규화 CS1 가져오기">
+                <Description><![CDATA[<p>컬러센서 1 값을 읽고 0-100으로 정규화합니다.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="정규화 CS2 가져오기">
+                <Description><![CDATA[<p>컬러센서 2 값을 읽고 0-100으로 정규화합니다.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="양쪽 정규화 가져오기">
+                <Description><![CDATA[<p>두 컬러센서 값을 모두 읽고 0-100으로 정규화합니다.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API 구성">
+                <Description><![CDATA[<p>컬러센서 API의 포트 번호와 컨트롤러 파라미터를 저장합니다.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>

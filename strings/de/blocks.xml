@@ -298,5 +298,64 @@
                 <Description><![CDATA[<p>Speichert Weiß- und Schwarzkalibrierungswerte für die Farbsensornormalisierung.</p>]]></Description>
             </Block>
         </PolyGroup>
+        <PolyGroup Name="OFDL CS API" DisplayName="Farbsensor-API - OFDL Dev." DisplayNamePrefix="OFDL CS API">
+            <Parameter Name="CS1Port" DisplayName="Farbsensor 1 Anschluss">
+                <Description><![CDATA[<p>Anschlussnummer für Farbsensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="CS2Port" DisplayName="Farbsensor 2 Anschluss">
+                <Description><![CDATA[<p>Anschlussnummer für Farbsensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="WhiteValue" DisplayName="Weißwert">
+                <Description><![CDATA[<p>Kalibrierungswert für Weiß</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BlackValue" DisplayName="Schwarzwert">
+                <Description><![CDATA[<p>Kalibrierungswert für Schwarz</p>]]></Description>
+            </Parameter>
+            <Parameter Name="BaseSpeed" DisplayName="Grundgeschwindigkeit">
+                <Description><![CDATA[<p>Grundgeschwindigkeit</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MinSpeed" DisplayName="Mindestgeschwindigkeit">
+                <Description><![CDATA[<p>Mindestgeschwindigkeit</p>]]></Description>
+            </Parameter>
+            <Parameter Name="MaxError" DisplayName="Maximaler Fehler">
+                <Description><![CDATA[<p>Maximaler Fehler</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothEnable" DisplayName="Glättung aktivieren">
+                <Description><![CDATA[<p>Sanften Geschwindigkeitsübergang aktivieren</p>]]></Description>
+            </Parameter>
+            <Parameter Name="SmoothLevel" DisplayName="Glättungsstufe">
+                <Description><![CDATA[<p>Glättungsstufe (1=sofort, 100=sehr allmählich)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS1" DisplayName="Rohdaten CS1 Ausgang">
+                <Description><![CDATA[<p>Rohdatenwert von Farbsensor 1</p>]]></Description>
+            </Parameter>
+            <Parameter Name="RawCS2" DisplayName="Rohdaten CS2 Ausgang">
+                <Description><![CDATA[<p>Rohdatenwert von Farbsensor 2</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS1" DisplayName="Normierter CS1 Ausgang">
+                <Description><![CDATA[<p>Normierter Wert von Farbsensor 1 (0-100)</p>]]></Description>
+            </Parameter>
+            <Parameter Name="NormCS2" DisplayName="Normierter CS2 Ausgang">
+                <Description><![CDATA[<p>Normierter Wert von Farbsensor 2 (0-100)</p>]]></Description>
+            </Parameter>
+            <Block Mode="API_GetRawCS1" DisplayName="Rohdaten CS1 lesen">
+                <Description><![CDATA[<p>Liest den rohen Reflexionsintensitätswert von Farbsensor 1.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetRawCS2" DisplayName="Rohdaten CS2 lesen">
+                <Description><![CDATA[<p>Liest den rohen Reflexionsintensitätswert von Farbsensor 2.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS1" DisplayName="Normiert CS1 lesen">
+                <Description><![CDATA[<p>Liest und normiert den Wert von Farbsensor 1 auf 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetNormCS2" DisplayName="Normiert CS2 lesen">
+                <Description><![CDATA[<p>Liest und normiert den Wert von Farbsensor 2 auf 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="API_GetBothNorm" DisplayName="Beide normiert lesen">
+                <Description><![CDATA[<p>Liest und normiert beide Farbsensorwerte auf 0-100.</p>]]></Description>
+            </Block>
+            <Block Mode="Configuration" DisplayName="API-Konfiguration">
+                <Description><![CDATA[<p>Speichert Anschlussnummern und Reglerparameter für die Farbsensor-API.</p>]]></Description>
+            </Block>
+        </PolyGroup>
     </PolyGroups>
 </EditorStrings>
